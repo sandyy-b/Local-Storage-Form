@@ -16,7 +16,7 @@
             <h2 class="p-3 mt-5 text-white bg-success" style="text-align: center;">Contact Form</h2>
         </div>
 
-        <form action="table.html">
+        <form class="form-container" method="post" action="javascript:void(0);">
 
             <div class="mb-1">
                 <label>Name:</label>
@@ -30,48 +30,51 @@
                 </div>
                 <div class="col-lg-6">
                     <label>Last Name:</label>
-                    <input type="text" class="form-control" id="inputLastName" required>
+                    <input type="text" class="form-control" id="inputLastName">
                     <span class="mb-3 text-danger" id="messageLastName"></span>
                 </div>
             </div>
 
             <div>
                 <label>Email Id:</label>
-                <input type="email" class="form-control" id="inputEmail" required>
+                <input type="email" class="form-control" id="inputEmail">
+                <span class="mb-3 text-danger" id="messageEmail"></span>
             </div>
-            <span class="mb-3 text-danger" id="messageEmail"></span>
 
             <div class="row">
                 <div class="col-lg-6">
                     <label>Password:</label>
-                    <input type="password" class="form-control" id="inputPassword" required>
+                    <input type="password" class="form-control" id="inputPassword">
                     <span class="mb-3 text-danger" id="messagePassword"></span>
                 </div>
 
                 <div class="col-lg-6">
                     <label>Confirm Password:</label>
-                    <input type="password" class="form-control" id="inputConfirmPassword" required>
+                    <input type="password" class="form-control" id="inputConfirmPassword">
                     <span class="mb-3 text-danger" id="messageConfirmPassword"></span>
                 </div>
             </div>
 
             <div>
                 <label>Phone Number:</label>
-                <input type="number" class="form-control" id="inputPhoneNumber" required>
+                <input type="number" class="form-control" id="inputPhoneNumber">
             </div>
             <span class="mb-3 text-danger" id="messagePhoneNumber"></span>
 
-            <div>
+            <div class="row">
                 <label>Nationality:</label>
-                <select class="form-select">
-                    <option>Select your Nationality</option>
-                    <option>India</option>
-                    <option>Pakistan</option>
-                    <option>Japan</option>
-                    <option>Spain</option>
-                    <option>Australia</option>
-                    <option>Portugal</option>
-                </select>
+                <div class="col-lg-6">
+                    <select class="form-select">
+                        <option>Select your Nationality</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                        <option>Japan</option>
+                        <option>Spain</option>
+                        <option>Australia</option>
+                        <option>Portugal</option>
+                    </select>
+                </div>
+                
             </div>
             <span class="mb-3" id="messageNationality"></span>
 
@@ -80,10 +83,10 @@
                     <label>Gender:</label>
                 </div>
                 <label>
-                    <input type="radio" id="male" required> Male
+                    <input type="radio" id="male"> Male
                 </label>
                 <label>
-                    <input type="radio" id="female" required> Female
+                    <input type="radio" id="female"> Female
                 </label>
                 <label>
                     <input type="radio" id="other" required> Other
