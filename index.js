@@ -24,6 +24,7 @@ function validation() {
     let password = document.getElementById("inputPassword").value;
     let confirmPassword = document.getElementById("inputConfirmPassword").value;
     let phoneNumber = document.getElementById("inputPhoneNumber").value;
+    let inputGender = document.querySelector('#messageGender:checked');
 
     if (fname == '') {
         document.getElementById("messageFirstName").innerHTML = "Please Enter your First Name";
@@ -44,10 +45,19 @@ function validation() {
         document.getElementById("messageConfirmPassword").innerHTML =
             "Please Confirm your Password";
     }
-    // if (phoneNumber == '') {
-    //     document.getElementById("messagePhoneNumber").innerHTML =
-    //         "Please Enter your Phone Number";
+    if (phoneNumber == '') {
+        document.getElementById("messagePhoneNumber").innerHTML =
+            "Please Enter your Phone Number";
+    }
+    // if (inputGender == '') {
+    //     document.getElementById("messageGender").innerHTML =
+    //         "Please Enter your Gender";
     // }
+    else if (password != confirmPassword) {
+        document.getElementById("messageCheckPassword").innerHTML = 
+        "<h3 class = 'text-danger'>Passwords did not match</h3>";
+    }
+    
     else {
         setData();
     }
@@ -69,4 +79,15 @@ function setData() {
     })
     user_records = localStorage.setItem("users", JSON.stringify(user_records));
     window.location.href = 'table.html';
+}
+
+function matchPassword() {
+    let inputPassword = document.getElementById("inputPassword");
+    let inputConfirmPassword = document.getElementById("inputConfirmPassword");
+    if (inputPassword != inputConfirmPassword) {
+        document.getElementById("messageCheckPassword").innerHTML = "<h3 class = 'text-danger'>Passwords did not match</h3>";
+    } 
+    else {
+        // document.getElementById("messageCheckPassword").innerHTML = "<h3 class = 'text-success'>Login Successfull</h3>";
+    }
 } 

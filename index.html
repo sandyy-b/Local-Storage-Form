@@ -57,9 +57,10 @@
 
             <div>
                 <label>Phone Number:</label>
-                <input type="number" class="form-control" id="inputPhoneNumber">
+                <input type="text" class="form-control" id="inputPhoneNumber">
+                <span class="mb-3 text-danger" id="messagePhoneNumber"></span>
             </div>
-            <span class="mb-3 text-danger" id="messagePhoneNumber"></span>
+            
 
             <div class="row">
                 <label>Nationality:</label>
@@ -91,10 +92,13 @@
                 <label>
                     <input type="radio" id="other" required> Other
                 </label>
+                <span class="mb-3" id="messageGender"></span>
             </div>
-            <span class="mb-3" id="messageGender"></span>
+            
 
-            <button type="submit" class="btn btn-primary" onclick="validation()">Submit</button>
+            <button type="submit" class="btn btn-success mb-5" onclick="validation()">Submit</button>
+            <button type="reset" class="btn btn-danger mb-5" >Reset</button>
+            <span class="mb-5" id="messageCheckPassword"></span>
         </form>
 
     </div>
