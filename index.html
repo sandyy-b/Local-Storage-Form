@@ -19,51 +19,55 @@
         <form class="form-container" method="post" action="javascript:void(0);">
 
             <div class="mb-1">
-                <label>Name:</label>
+                <label class="text-primary">Name:</label>
             </div>
 
-            <div class="row">
+
+            <div class="row mb-4">
                 <div class="col-lg-6">
-                    <label>First Name:</label>
+                    <label class="text-primary">First Name:</label>
                     <input type="text" class="form-control" id="inputFirstName">
                     <span class="mb-3 text-danger" id="messageFirstName"></span>
                 </div>
                 <div class="col-lg-6">
-                    <label>Last Name:</label>
+                    <label class="text-primary">Last Name:</label>
                     <input type="text" class="form-control" id="inputLastName">
                     <span class="mb-3 text-danger" id="messageLastName"></span>
                 </div>
             </div>
 
-            <div>
-                <label>Email Id:</label>
+
+            <div class="mb-4">
+                <label class="text-primary">Email Id:</label>
                 <input type="email" class="form-control" id="inputEmail">
                 <span class="mb-3 text-danger" id="messageEmail"></span>
             </div>
 
-            <div class="row">
+
+            <div class="row mb-4">
                 <div class="col-lg-6">
-                    <label>Password:</label>
+                    <label class="text-primary">Password:</label>
                     <input type="password" class="form-control" id="inputPassword">
                     <span class="mb-3 text-danger" id="messagePassword"></span>
                 </div>
 
                 <div class="col-lg-6">
-                    <label>Confirm Password:</label>
+                    <label class="text-primary">Confirm Password:</label>
                     <input type="password" class="form-control" id="inputConfirmPassword">
-                    <span class="mb-3 text-danger" id="messageConfirmPassword"></span>
+                    <span class="mb-3 text-danger" id="messageConfirmPassword"></span>                   
                 </div>
             </div>
 
-            <div>
-                <label>Phone Number:</label>
-                <input type="text" class="form-control" id="inputPhoneNumber">
+
+            <div class="mb-4">
+                <label class="text-primary">Phone Number:</label>
+                <input type="number" class="form-control" id="inputPhoneNumber" maxlength="10">
                 <span class="mb-3 text-danger" id="messagePhoneNumber"></span>
             </div>
             
 
-            <div class="row">
-                <label>Nationality:</label>
+            <!-- <div class="row mb-4">
+                <label class="text-primary">Nationality:</label>
                 <div class="col-lg-6">
                     <select class="form-select">
                         <option>Select your Nationality</option>
@@ -75,30 +79,33 @@
                         <option>Portugal</option>
                     </select>
                 </div>
-                
-            </div>
-            <span class="mb-3" id="messageNationality"></span>
+                <span class="mb-3" id="messageNationality"></span>    
+            </div> -->
+            
 
-            <div>
+            <div class="mb-4">
                 <div>
-                    <label>Gender:</label>
+                    <label class="text-primary">Gender:</label>
                 </div>
-                <label>
-                    <input type="radio" id="male"> Male
+                <label class="text-primary">
+                    <input type="radio" name="gender"> Male
                 </label>
-                <label>
-                    <input type="radio" id="female"> Female
+                <label class="text-primary">
+                    <input type="radio" name="gender"> Female
                 </label>
-                <label>
-                    <input type="radio" id="other" required> Other
+                <label class="text-primary">
+                    <input type="radio" name="gender"> Other
                 </label>
-                <span class="mb-3" id="messageGender"></span>
+                <div>
+                    <span class="mb-3 text-danger" id="messageGender"></span>
+                </div>
+                
             </div>
             
 
             <button type="submit" class="btn btn-success mb-5" onclick="validation()">Submit</button>
-            <button type="reset" class="btn btn-danger mb-5" >Reset</button>
-            <span class="mb-5" id="messageCheckPassword"></span>
+            <button type="reset" class="btn btn-danger mb-5" id="reset">Reset</button>
+
         </form>
 
     </div>
